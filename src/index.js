@@ -1,19 +1,8 @@
-// OLD IMPORT STYLE: const $ = require('jquery');
-// New import style, ES6 syntax
-import $ from 'jquery';
-import './style.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-/* seperate function
-function increase_seconds() {
-  seconds++;
-  $('#main').html(`You've been on this page for ${seconds} seconds..`);
-} */
+const App = () => {
+  return <div className="test">All the React are belong to us!</div>;
+};
 
-const MILISECONDS = 1000;
-let seconds = 0;
-
-setInterval(() => {
-  seconds += 1;
-  // find the element with the id of main and
-  $('#main').html(`You've been on this page for ${seconds} seconds...`);
-}, MILISECONDS);
+ReactDOM.render(<App />, document.getElementById('main'));
